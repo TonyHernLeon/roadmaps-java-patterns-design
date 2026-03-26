@@ -1,28 +1,31 @@
 package patrones_creacionales.factory_method;
 
 /**
- * PRODUCTO CONCRETO: Coche
+ * PRODUCTO CONCRETO: Moto
  *
  * Ejemplo de implemantación de la interfaz 'Vehículo'
- * donde el objeto 'Coche' hará suyos los métodos de la interfaz
+ * donde el objeto 'Moto' hará suyos los métodos de la interfaz
  * y los ejecutará como este necesite.
  *
  */
-public class Coche implements Vehículo{
-    String modelo;
+public class Moto implements Vehículo{
+    String marca;
+    Boolean tieneSideCar;
 
     /** Construtor */
-    public Coche(String modelo) {
-        this.modelo = modelo;
+    public Moto(String modelo, Boolean tieneSideCar) {
+        this.marca = modelo;
+        this.tieneSideCar = tieneSideCar;
     }
 
     @Override
     public void arrancar() {
-        System.out.println("El coche con el modelo "+ modelo +" se ha arranca.");
+        System.out.println("La moto de la marca "+ this.marca +" se ha arranca.");
     }
 
     @Override
     public void describirse() {
-        System.out.println(("Soy un coche modelo: "+ modelo));
+        String tieneSideCarString = this.tieneSideCar == Boolean.TRUE ? "Si":"No";
+        System.out.println(("Soy una moto de la marca: "+ this.marca +" y "+tieneSideCarString+" tiene sidecar"));
     }
 }

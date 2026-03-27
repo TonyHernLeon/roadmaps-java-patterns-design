@@ -18,6 +18,14 @@ package patrones_creacionales.singleton;
  *  ---------------------------------------------------------------------
  */
 public class ConfiguracionApp {
+
+    /**
+     * ----------------------------------------------------------------
+     * # PUNTO 2: la única instancia, guardada aquí dentro. La definimos
+     * como 'static', lo que significa que PERTENECE A LA CLASE, y no a un
+     * objeto. Por defecto su valor es null, ya que todavía no se ha creado.
+     * ----------------------------------------------------------------
+     */
     private static ConfiguracionApp instancia = null;
 
     //- Datos de la configuración de ejemplo
@@ -26,6 +34,13 @@ public class ConfiguracionApp {
     private String version;
     private int volumen;
 
+    /**
+     * ----------------------------------------------------------------
+     * # PUNTO 1: Contructor PRIVADO.
+     * Nadie podrá hacer un [new ConfiguracionApp()] al ser un constructor privado.
+     * Y si lo intentasen, se lanzaría un error.
+     * ----------------------------------------------------------------
+     */
     private ConfiguracionApp() {
         System.out.println(" [ConfiguracionApp] Cargando configuracion por primera vez...");
 
@@ -37,7 +52,20 @@ public class ConfiguracionApp {
         System.out.println(" [ConfiguracionApp] ¡Configuración Lista!");
     }
 
-    public static ConfiguracionApp  getInstance() {
+    /**
+     * ----------------------------------------------------------------
+     * # PUNTO 3: Método estático getInstance().
+     * Es la ÚNICA forma de obtener la instancia.
+     *
+     * Y funciona de la siguiente manera:
+     *  - Primera vez que alguien llama: instancia == null → la crea.
+     *  - Resto de veces: instancia ya existe → devuelve la misma
+     *
+     * Esto se llama "Lazy Initialization" (inicialización perezosa),
+     * porque la instancia no se crea hasta que alguien la pide por 1ª vez.
+     * ----------------------------------------------------------------
+     */
+    public static ConfiguracionApp getInstance() {
         if (instancia == null) {
             instancia = new ConfiguracionApp();
         }

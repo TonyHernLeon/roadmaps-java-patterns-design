@@ -10,7 +10,7 @@ package patrones_creacionales.factory_method;
  * Usamos una interfaz, porque no nos interesa que el código que usa vehículos sepa, ni le importe,
  * si es un coche, una moto, un avión... Sola sabe que es un 'Vehículo'
  */
-public interface Vehículo {
+public interface Vehiculo {
 
     // - Todos los vehículos sabrán arrancar, pero cada uno a su manera.
     void arrancar();

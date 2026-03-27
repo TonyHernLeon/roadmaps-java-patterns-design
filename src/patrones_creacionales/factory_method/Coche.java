@@ -8,7 +8,7 @@ package patrones_creacionales.factory_method;
  * y los ejecutará como este necesite.
  *
  */
-public class Coche implements Vehículo{
+public class Coche implements Vehiculo {
     String modelo;
     Boolean tieneRemolque;
 

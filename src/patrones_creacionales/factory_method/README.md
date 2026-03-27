@@ -56,14 +56,14 @@ FabricaCoches    FabricaMotos  ← Creadores Concretos
 | `FabricaVehiculo.java` | Creador Abstracto | Clase abstracta con el Factory Method |
 | `FabricaCoches.java` | Creador Concreto | Fábrica que crea Coches |
 | `FabricaMotos.java` | Creador Concreto | Fábrica que crea Motos |
-| `Main.java` | Cliente | Demuestra el uso del patrón |
+| `patrones_creacionales.factory_method.Main.java` | Cliente | Demuestra el uso del patrón |
 
 ---
 
 ## ¿Cómo ejecutarlo?
 
 1. Asegúrate de que todos los archivos están en el paquete `patrones_creacionales.factory_method`
-2. Ejecuta la clase `Main.java`
+2. Ejecuta la clase `patrones_creacionales.factory_method.Main.java`
 3. Verás en consola cómo se fabrican diferentes vehículos
 
 **Salida esperada (resumen):**

@@ -14,7 +14,7 @@ public class FabricaCoches extends FabricaVehiculo {
 
     @Override
     public Vehiculo crearVehiculo(String nombre) {
-        System.out.println("[FabricaCoche]: Creando el coche: "+nombre);
-        return new Coche(nombre, Boolean.FALSE);
+        System.out.println("[FabricaCoches]: Creando el coche: "+nombre);
+        return new Coche(nombre, Boolean.FALSE);  // # Aquí decidimos que creamos un Coche.
     }
 }
